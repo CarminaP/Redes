@@ -80,7 +80,7 @@ public class MainFrame {
                 try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                     String text = null;
                     while ((text = br.readLine()) != null) {
-                    	System.out.println(text);
+                    	System.out.println(text); // aqui falta ver como se va a leer el txt file para dividirlo y los switch case para receptor y coordenada
                     }
                 } catch (IOException exp) {
                     exp.printStackTrace();
