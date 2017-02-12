@@ -70,7 +70,7 @@ public class MainFrame {
 	
 	static class SendAction implements ActionListener {        
 		@Override
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(ActionEvent e) { //Todo esto es el FileChooser para abir el archivo txt
 		    JFileChooser chooser = new JFileChooser();
 		    FileNameExtensionFilter filter = new FileNameExtensionFilter("jpg", "txt");
 		    chooser.setFileFilter(filter);
@@ -80,7 +80,7 @@ public class MainFrame {
                 try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                     String text = null;
                     while ((text = br.readLine()) != null) {
-                    	System.out.println(text); // aqui falta ver como se va a leer el txt file para dividirlo y los switch case para receptor y coordenada
+                    	System.out.println(text); // aqui falta hacer como se va a leer el txt file para dividirlo y los switch case para receptor y coordenada
                     }
                 } catch (IOException exp) {
                     exp.printStackTrace();
